@@ -23,6 +23,22 @@ if args.percent:
         counts[args.key][k] /= counts['_all'][k]
 
 # print the count values
-items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
-for k,v in items:
+items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)[:10]
+
+import matplotlib.pyplot as plt
+top_10_items_sorted = sorted(items, key=lambda item:item[1])
+
+
+for k,v in top_10_items_sorted:
     print(k,':',v)
+
+
+# unpack items into separate lists for plotting
+labels, values = zip(*top_10_items_sorted)
+
+# graph the top 10 counts for the hashtag
+plt.figure(figsize=(10,6))
+plt.bar(labels, values, color='skyblue')
+plt.tight_layout()
+plt.savefig(f'top_10_{args.key}_country.png', format='png')
+plt.close()
