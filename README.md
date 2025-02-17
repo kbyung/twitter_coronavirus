@@ -34,10 +34,10 @@ For the reduce step, I created two different files to do this: `reduce.py` and `
 
 I ran `visualize.py` on the outputs of `reduce.py` to create bar charts of the top 10 countries and languages that tweeted using the hashtags '#coronavirus' and '#코로나바이러스'  ('#coronavirus' in Korean).
 
-<img src=img/top_10_#coronavirus_country.png width=100% />
-<img src=img/top_10_#coronavirus_language.png width=100% />
-<img src=img/top_10_#코로나바이러스_country.png width=100% />
-<img src=img/top_10_#코로나바이러스_language.png width=100% />
+<img src="img/top_10_#coronavirus_country.png" width=100% />
+<img src="img/top_10_#coronavirus_language.png" width=100% />
+<img src="img/top_10_#코로나바이러스_country.png" width=100% />
+<img src="img/top_10_#코로나바이러스_language.png" width=100% />
 
 From these graphs, we can see that the US sent out the most number of tweets using '#coronavirus' and Korea was the top country to use '#코로나바이러스'.
 
